@@ -17,7 +17,8 @@
           <a href="#">
             <img src="./images/logo.svg" alt="Manage logo">
           </a>
-          <button class="mobile-nav-toggle" aria-controls="primary-navigation">
+          <button class="mobile-nav-toggle" aria-controls="primary-navigation"
+          aria-expanded="false">
             <img src="./images/icon-hamburger.svg" 
             class="icon-hamburger" alt="hamburger icon" aria-hidden="true">
 
@@ -26,10 +27,11 @@
 
             <span class="visually-hidden">Menu</span>
           </button>
-          <nav class="primary-navigation" >
+          <nav class="primary-navigation" 
+          id="primary-navigation">
             <ul role='list' 
             class="nav-list" 
-            aria-label="primary" id="primary-navigation">
+            aria-label="primary">
               <li><a href="#"></a>Pricing</li>
               <li><a href="#"></a>Products</li>
               <li><a href="#"></a>About Us</li>
@@ -37,7 +39,7 @@
               <li><a href="#"></a>Community</li>
             </ul>
           </nav>
-          <button class="button" style="display: none;">Get Started</button>
+          <button class="button | display-md-inline-flex display-sm-none" >Get Started</button>
         </div>
       </div>
     </header>
