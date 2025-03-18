@@ -147,26 +147,6 @@ textarea:not([rows]) {
   scroll-margin-block: 5ex;
 }
 
-.container{
-  --max-width:1110px;
-  --padding:1rem;
-
-  width:min(var(--max-width),100% - (var(--padding)*2));
-  margin-inline: auto;
-}
-
-.even-columns{
-  display: grid;
-  gap: 1rem;
-}
-
-@media(min-width:50em){
-  /* this em goes to default browser size not to root */
-  .even-columns{
-    grid-auto-flow: column;
-    grid-auto-columns: 1fr;
-  }
-}
 
 
 /* font size */
@@ -180,6 +160,15 @@ body{
   font-size: var(--fs-body); 
   font-family: var(--ff-body);
   color: var(--clr-primary-400);
+}
+
+p:not([class]) {
+  opacity: 0.7;
+  max-width: 32ch;
+}
+
+p[data-width='wide']{
+  max-width: 42ch;
 }
 
 .button{
@@ -335,6 +324,37 @@ body{
   clip: rect(0,0,0,0);
   white-space: nowrap;
   border: 0;
+}
+
+.container{
+  --max-width:1110px;
+  --padding:1rem;
+
+  width:min(var(--max-width),100% - (var(--padding)*2));
+  margin-inline: auto;
+}
+
+:where(.flow :not(:first-child)){
+  margin-top:var(--flow-spacer,4em);
+}
+
+div{
+  --flow-spacer:5em;
+}
+
+/* :where(.flow>:not(:first-child)){...} 
+where has specificity of 0*/
+.even-columns{
+  display: grid;
+  gap: 1rem;
+}
+
+@media(min-width:50em){
+  /* this em goes to default browser size not to root */
+  .even-columns{
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+  }
 }
 
 /* text */
