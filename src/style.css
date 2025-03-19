@@ -307,7 +307,35 @@ p[data-width='wide']{
   display: none;
 }
 
+/* cta */
+.cta{
+  position: relative;
+  isolation: isolate;
+  /* creates new stacking context */
+  text-align: center;
+  
+}
 
+@media(min-width:50em){
+  .cta{
+    text-align: left;
+  }
+}
+.cta::before{
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url(
+    '../public/images/bg-tablet-pattern.svg'
+  ),
+  url(
+    '../public/images/bg-tablet-pattern.svg'
+  );
+  background-position:-15rem -5rem, 80rem -42rem;
+  background-repeat: no-repeat;
+  z-index: -1;
+  opacity: .1;
+}
 
 
 /* Utility classes */
@@ -333,6 +361,32 @@ p[data-width='wide']{
   width:min(var(--max-width),100% - (var(--padding)*2));
   margin-inline: auto;
 }
+.even-columns{
+  display: grid;
+  gap: 1rem;
+}
+
+
+@media(min-width:50em){
+  /* this em goes to default browser size not to root */
+  .even-columns{
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+  }
+}
+
+.vertical-align-center{
+  align-items: center;
+}
+
+
+
+@media(min-width:50em){
+  .justify-self-end-md{
+  justify-self: end;
+}
+}
+
 
 :where(.flow :not(:first-child)){
   margin-top:var(--flow-spacer,4em);
@@ -344,18 +398,7 @@ div{
 
 /* :where(.flow>:not(:first-child)){...} 
 where has specificity of 0*/
-.even-columns{
-  display: grid;
-  gap: 1rem;
-}
 
-@media(min-width:50em){
-  /* this em goes to default browser size not to root */
-  .even-columns{
-    grid-auto-flow: column;
-    grid-auto-columns: 1fr;
-  }
-}
 
 /* text */
 .text-primary-400{
