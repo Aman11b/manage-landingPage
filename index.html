@@ -15,7 +15,9 @@
       <div class="container">
         <div class="nav-wrapper">
           <a href="#">
-            <img src="./images/logo.svg" alt="Manage logo">
+            <svg class="logo" width='146' height='24' >
+                <use xlink:href="./images/logo.svg#logo"></use>
+                </svg>
           </a>
           <button class="mobile-nav-toggle" aria-controls="primary-navigation"
           aria-expanded="false">
@@ -116,40 +118,64 @@
         </section>
     </main>
 
-    <footer class="bg-neutral-900 text-neutral-100  padding-block-700">
+    <footer class="primary-footer | bg-neutral-900 text-neutral-100  padding-block-700">
         <div class="container">
-          <div class="even-columns">
-            <div>
-              <a href="#">
-                <img src="./images/logo.svg" alt="Manage logo">
+          <div class="primary-footer-wrapper">
+            <div class="primary-footer-logo-social">
+              <a href="#" aria-label="home">
+                <svg class="logo" width='146' height='24' >
+                  <use xlink:href="./images/logo.svg#logo"></use>
+                </svg>
               </a>
-              <ul role="list" aria-label="social-links">
-                <li><a aria-label="facebook" href="#"></a></li>
-                <li><a aria-label="youtube" href="#"></a></li>
-                <li><a aria-label="twitter" href="#"></a></li>
-                <li><a aria-label="pinterest" href="#"></a></li>
-                <li><a aria-label="instagram" href="#"></a></li>
+              <ul role="list"   class="social-list" aria-label="social-links">
+                <li><a aria-label="facebook" href="#">
+                  <svg class="social-icon">
+                    <use xlink:href="./images/social-icon.svg#icon-facebook"></use>
+                  </svg>
+                </a></li>
+                <li><a aria-label="youtube" href="#">
+                  <svg class="social-icon">
+                    <use xlink:href="./images/social-icon.svg#icon-youtube"></use>
+                  </svg>
+                </a></li>
+                <li><a aria-label="twitter" href="#">
+                  <svg class="social-icon">
+                    <use xlink:href="./images/social-icon.svg#icon-twitter"></use>
+                  </svg>
+
+                </a></li>
+                <li><a aria-label="pinterest" href="#">
+                  <svg class="social-icon">
+                    <use xlink:href="./images/social-icon.svg#icon-pinterest"></use>
+                  </svg>
+                </a></li>
+                <li><a aria-label="instagram" href="#">
+                  <svg class="social-icon">
+                    <use xlink:href="./images/social-icon.svg#icon-instagram"></use>
+                  </svg>
+
+                </a></li>
               </ul>
             </div>
-            <div>
+            <div class="primary-footer-nav">
               <nav class="footer-nav">
                 <ul role="list" aria-label="footer">
-                  <li><a href="#"></a>Home</li>
-                  <li><a href="#"></a>Pricing</li>
-                  <li><a href="#"></a>Products</li>
-                  <li><a href="#"></a>About Us</li>
-                  <li><a href="#"></a>Careers</li>
-                  <li><a href="#"></a>Community</li>
-                  <li><a href="#"></a>Privacy Policy</li>
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Pricing</a></li>
+                  <li><a href="#">Products</a></li>
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">Careers</a></li>
+                  <li><a href="#">Community</a></li>
+                  <li><a href="#">Privacy Policy</a></li>
                 </ul>
               </nav>
             </div>
-            <div>
+            <div class="primary-footer-form">
               <form action="#">
                 <input type="email">
-                <button class="button">Go</button>
-                <p>Copyright 2020. All Rights Reserved</p>
+                <button class="button" data-shadow="none">Go</button>
               </form>
+              <p>Copyright 2020. All Rights Reserved</p>
             </div>
           </div>
         </div>
